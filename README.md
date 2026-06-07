@@ -1,75 +1,130 @@
-# DJS03: React Podcast Landing Page
+# 🎙️ Podcast Discovery App
 
-## Overview
+## 📌 Overview
 
-In this project, you will build the landing page for a podcast discovery app using **React**. Your goal is to fetch podcast data from an external API and dynamically render a **responsive grid of podcast previews**. This project focuses on **data fetching**, **component structure**, **rendering logic**, and **layout styling**.
+This project is a React-based podcast discovery application that fetches podcast data from an external API and displays podcast previews in a responsive grid layout.
 
----
-
-## Core Objectives
-
-- Fetch podcast data from an API: https://podcast-api.netlify.app/ on initial page load.
-- Display a loading indicator while data is being fetched, and handle errors or empty results with a clear user message.
-- Render a responsive **grid layout** of podcast previews using modular, reusable React components.
-- Pass podcast data into components via props and render each podcast card with the following:
-  - Podcast **image**
-  - Podcast **title**
-  - Number of **seasons**
-  - Associated **genre names**
-  - Formatted **last updated** date (e.g., "2 days ago")
-- Apply clean, consistent layout and styling across different screen sizes using CSS Grid or Flexbox.
-- Maintain high-quality, readable code with clear structure and **JSDoc comments** for key functions and components.
+Users can browse podcasts and view information such as the podcast image, title, number of seasons, genres, and the last updated date.
 
 ---
 
-## Technical Requirements
+## 🚀 Features
 
-- Use **React functional components**
-- Use the **Fetch API**
-- Use `useEffect()` to fetch data once on mount
-- Use `useState()` to manage podcast data
-- Use `.map()` to dynamically render PodcastPreviewCard components
-- Format dates using `date-fns` or a custom formatter
-
----
-
-## Responsiveness Requirements
-
-- Must look good on:
-  - Desktop (≥1200px)
-  - Tablet (~768px)
-  - Mobile (~375px)
-- Use **CSS Grid** or **Flexbox**
-- Media queries or frameworks like **Tailwind CSS** are allowed
+- Fetches podcast data from an API on page load
+- Displays a loading message while data is being fetched
+- Handles API errors gracefully
+- Shows a message when no podcasts are available
+- Responsive layout for desktop, tablet, and mobile devices
+- Reusable React components
+- Human-readable date formatting
+- Genre tags displayed for each podcast
 
 ---
 
-## Deliverables
+## 🛠️ Technologies Used
 
-- **Functional React Application**
+- React
+- JavaScript (ES6+)
+- CSS
+- Fetch API
+- React Hooks (`useState`, `useEffect`)
 
-  - A working React app that fetches podcast data from an external API on initial load.
-  - The app renders a grid of podcast previews using reusable components.
+---
 
-- **Loading, Error, and Empty States**
+## 📂 Project Structure
 
-  - A clear loading indicator is displayed while fetching data.
-  - Meaningful error or empty state messaging is shown if the fetch fails or returns no results.
+```text
+src/
+│
+├── components/
+│   └── PodcastCard.jsx
+│
+├── data/
+│   └── data.js
+│
+├── utils/
+│   └── formatDate.js
+│
+├── App.jsx
+├── App.css
+├── main.jsx
+└── index.css
+```
 
-- **Podcast Preview Card Component**
+---
 
-  - A reusable component that displays:
-    - Podcast image
-    - Podcast title
-    - Number of seasons
-    - Genre tags
-    - Last updated date in a human-readable format (e.g., "3 days ago")
+## ▶️ Installation
 
-- **Responsive Layout**
+1. Clone the repository
 
-  - Grid layout that adapts to mobile, tablet, and desktop screen sizes using responsive design principles.
+```bash
+git clone <repository-url>
+```
 
-- **Codebase**
-  - Clean, modular code with clearly separated components.
-  - All major functions and modules documented with **JSDoc** comments.
-  - Consistent formatting across JavaScript, JSX, HTML, and CSS files.
+2. Navigate to the project folder
+
+```bash
+cd podcast-discovery-app
+```
+
+3. Install dependencies
+
+```bash
+npm install
+```
+
+4. Start the development server
+
+```bash
+npm run dev
+```
+
+5. Open the local development URL shown in the terminal.
+
+---
+
+## 🌐 API
+
+Podcast data is fetched from:
+
+https://podcast-api.netlify.app/
+
+Genre information is stored locally in `data.js`.
+
+---
+
+## 📱 Responsive Design
+
+The application is designed to work on:
+
+- Desktop (1200px and above)
+- Tablet (around 768px)
+- Mobile (around 375px)
+
+CSS Grid is used to create a responsive layout that adapts to different screen sizes.
+
+---
+
+## 📄 Component Description
+
+### PodcastCard
+
+A reusable component that displays:
+
+- Podcast image
+- Podcast title
+- Number of seasons
+- Genre tags
+- Last updated date
+
+Props:
+
+```jsx
+<PodcastCard podcast={podcast} />
+```
+
+---
+
+## 👨‍💻 Author
+
+Created by Amirah Oliver for the React Podcast Landing Page project.
