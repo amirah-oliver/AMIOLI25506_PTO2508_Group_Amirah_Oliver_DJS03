@@ -1,5 +1,5 @@
 /**
- * Converts date into a human readable format
+ * Converts date into a human readable format 
  * @param {string} date
  * @returns {string}
  */
